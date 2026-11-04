@@ -1,1 +1,1 @@
-# revenda_de_jogos-tde
+depois da de adicionarmos explicacao geral das nossas partes pro professor ver e um resuminho e tals e pa
