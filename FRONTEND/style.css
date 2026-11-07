@@ -3,30 +3,27 @@
 ======================================== */
 
 :root {
+    /* Fundos*/
+    --cor-primaria: #2d1036;
+    --cor-secundaria: #d97352;
+    --cor-display: #6b0733;
 
-    /* Roxo */
-    --cor-roxo: #8000ff;
-    --cor-roxo-hover: #6500cc;
+    /* Botoes */
+    --cor-botao-primaria: #6b0733;
+    --cor-botao-primaria-hover: #8d0b44;
 
-    /* Rosa */
-    --cor-rosa: #ff1493;
-    --cor-rosa-hover: #d60076;
+    --cor-botao-secundaria: #6850ad;
+    --cor-botao-secundaria-hover: #643fd4;
 
-    /* Fundos */
-    --cor-fundo: #b6b2b2;
-    --cor-fundo-escuro: #171717;
-    --cor-banner: #252525;
-    --cor-card: #ffffff;
+    --cor-botao-texto: #fcdce7;
 
     /* Textos */
-    --cor-texto: #333333;
-    --cor-texto-claro: #ffffff;
+    --cor-texto: #d68000;
+    --cor-texto-escuro: #1a1010;
     --cor-preco: #0c73a3;
 
     /* Outros */
-    --cor-sombra: #0002;
-    --cor-botao-texto: #ffffff;
-
+    --cor-sombra: #0c73a3;
 }
 
 
@@ -42,7 +39,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: var(--cor-fundo);
+    background-color: var(--cor-secundaria);
     color: var(--cor-texto);
 }
 
@@ -52,8 +49,8 @@ body {
 ======================================== */
 
 .cabecalho {
-    background-color: var(--cor-fundo-escuro);
-    color: var(--cor-texto-claro);
+    background-color: var(--cor-primaria);
+    color: var(--cor-texto-escuro);
 
     padding: 1.25rem;
 
@@ -63,11 +60,11 @@ body {
 }
 
 .logo {
-    color: var(--cor-roxo);
+    color: var(--cor-display);
 }
 
 .logo-destaque {
-    color: var(--cor-rosa);
+    color: var(--cor-secundaria);
 }
 
 
@@ -97,21 +94,21 @@ body {
 
 /* Entrar */
 .botao-login {
-    background-color: var(--cor-roxo);
+    background-color: var(--cor-botao-primaria);
 }
 
 .botao-login:hover {
-    background-color: var(--cor-roxo-hover);
+    background-color: var(--cor-botao-primaria-hover);
     transform: scale(1.05);
 }
 
 /* Cadastrar */
 .botao-cadastro {
-    background-color: var(--cor-rosa);
+    background-color: var(--cor-botao-secundaria);
 }
 
 .botao-cadastro:hover {
-    background-color: var(--cor-rosa-hover);
+    background-color: var(--cor-botao-secundaria-hover);
     transform: scale(1.05);
 }
 
@@ -121,8 +118,8 @@ body {
 ======================================== */
 
 .banner {
-    background-color: var(--cor-banner);
-    color: var(--cor-texto-claro);
+    background-color: var(--cor-secundaria);
+    color: var(--cor-texto-escuro);
 
     text-align: center;
     padding: 5rem 1.25rem;
@@ -171,20 +168,20 @@ body {
 
 /* Ver todos */
 .botao-todos {
-    background-color: var(--cor-roxo);
+    background-color: var(--cor-botao-primaria);
 }
 
 .botao-todos:hover {
-    background-color: var(--cor-roxo-hover);
+    background-color: var(--cor-botao-primaria-hover);
 }
 
 /* Ofertas */
 .botao-ofertas {
-    background-color: var(--cor-rosa);
+    background-color: var(--cor-botao-secundaria);
 }
 
 .botao-ofertas:hover {
-    background-color: var(--cor-rosa-hover);
+    background-color: var(--cor-botao-secundaria-hover);
 }
 
 /* Filtro selecionado */
@@ -199,7 +196,7 @@ body {
 ======================================== */
 
 .seletor-genero {
-    background-color: var(--cor-rosa);
+    background-color: var(--cor-botao-secundaria);
     color: var(--cor-botao-texto);
 
     border: none;
@@ -216,7 +213,7 @@ body {
 }
 
 .seletor-genero:hover {
-    background-color: var(--cor-rosa-hover);
+    background-color: var(--cor-botao-secundaria-hover);
 }
 
 .seletor-genero:focus {
@@ -224,7 +221,7 @@ body {
 }
 
 .seletor-genero option {
-    background-color: var(--cor-rosa);
+    background-color: var(--cor-botao-secundaria);
     color: var(--cor-botao-texto);
 }
 
@@ -236,6 +233,7 @@ body {
 .secao-produtos {
     padding: 3.125rem 1.25rem;
     text-align: center;
+    background-color: var(--cor-display);
 }
 
 .titulo-secao {
@@ -247,6 +245,7 @@ body {
     justify-content: center;
     gap: 1.5625rem;
     flex-wrap: wrap;
+
 }
 
 
@@ -255,7 +254,7 @@ body {
 ======================================== */
 
 .card-jogo {
-    background-color: var(--cor-card);
+    background-color: var(--cor-primaria);
 
     width: 15.625rem;
     padding: 0.9375rem;
@@ -288,7 +287,7 @@ body {
 ======================================== */
 
 .botao-comprar {
-    background-color: var(--cor-roxo);
+    background-color: var(--cor-botao-secundaria);
     color: var(--cor-botao-texto);
 
     border: none;
@@ -301,7 +300,7 @@ body {
 }
 
 .botao-comprar:hover {
-    background-color: var(--cor-roxo-hover);
+    background-color: var(--cor-botao-secundaria-hover);
 }
 
 
@@ -310,7 +309,7 @@ body {
 ======================================== */
 
 .secao-sobre {
-    background-color: var(--cor-card);
+    background-color: var(--cor-primaria);
 
     padding: 3.125rem 1.25rem;
     text-align: center;
@@ -331,6 +330,8 @@ body {
 .secao-contato {
     padding: 2.5rem 1.25rem;
     text-align: center;
+
+    color: var(--cor-texto-escuro);
 }
 
 .texto-contato {
@@ -343,8 +344,8 @@ body {
 ======================================== */
 
 .rodape {
-    background-color: var(--cor-fundo-escuro);
-    color: var(--cor-texto-claro);
+    background-color: var(--cor-secundaria);
+    color: var(--cor-texto-escuro);
 
     text-align: center;
     padding: 1.25rem;
