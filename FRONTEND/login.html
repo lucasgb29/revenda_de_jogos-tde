@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>GameStore - Login</title>
+
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <!-- Cabeçalho -->
+    <header class="cabecalho">
+
+        <h1 class="logo">
+            Game<span class="logo-destaque">Store</span>
+        </h1>
+
+        <div class="area-login">
+            <a href="index.html" class="botao-login">Início</a>
+        </div>
+
+    </header>
+
+    <main>
+
+        <!-- Seção de login -->
+        <section class="secao-login">
+
+            <div class="card-login">
+
+                <h2 class="titulo-secao">Bem-vindo de volta!</h2>
+
+                <p class="descricao-login">
+                    Entre na sua conta para aproveitar a GameStore.
+                </p>
+
+                <form action="#" method="POST">
+
+                    <!-- Nome de usuário -->
+                    <div class="grupo-campo">
+                        <label for="usuario">Nome de usuário</label>
+
+                        <input
+                            type="text"
+                            id="usuario"
+                            name="usuario"
+                            placeholder="Digite seu nome de usuário"
+                            required
+                        />
+                    </div>
+
+                    <!-- Senha -->
+                    <div class="grupo-campo">
+                        <label for="senha">Senha</label>
+
+                        <input
+                            type="password"
+                            id="senha"
+                            name="senha"
+                            placeholder="Digite sua senha"
+                            required
+                        />
+                    </div>
+
+                    <!-- Botão entrar -->
+                    <button type="submit" class="botao-entrar-conta">
+                        Entrar
+                    </button>
+
+                </form>
+
+                <!-- Link para cadastro -->
+                <p class="texto-cadastro">
+                    Ainda não possui uma conta?
+                    <a href="cadastro.html">Cadastre-se</a>
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="rodape">
+
+        <p class="texto-rodape">
+            &copy; 2026 GameStore - Todos os direitos reservados.
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

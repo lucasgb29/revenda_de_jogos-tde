@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GameStore - Cadastro</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <!-- Cabeçalho -->
+    <header class="cabecalho">
+        <h1 class="logo">Game<span class="logo-destaque">Store</span></h1>
+
+        <div class="area-login">
+            <a href="index.html" class="botao-login">Início</a>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- Formulário de cadastro -->
+        <section class="secao-cadastro">
+
+            <div class="card-cadastro">
+
+                <h2 class="titulo-secao">Criar uma conta</h2>
+
+                <p class="descricao-cadastro">
+                    Cadastre-se na GameStore e aproveite nossas ofertas!
+                </p>
+
+                <form action="#" method="POST">
+
+                    <div class="grupo-campo">
+                        <label for="nome">Nome completo</label>
+                        <input
+                            type="text"
+                            id="nome"
+                            name="nome"
+                            placeholder="Digite seu nome completo"
+                            required
+                        />
+                    </div>
+
+                    <div class="grupo-campo">
+                        <label for="usuario">Nome de usuário</label>
+                        <input
+                            type="text"
+                            id="usuario"
+                            name="usuario"
+                            placeholder="Escolha um nome de usuário"
+                            required
+                        />
+                    </div>
+
+                    <div class="grupo-campo">
+                        <label for="email">E-mail</label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Digite seu e-mail"
+                            required
+                        />
+                    </div>
+
+                    <div class="grupo-campo">
+                        <label for="telefone">Número de telefone</label>
+                        <input
+                            type="tel"
+                            id="telefone"
+                            name="telefone"
+                            placeholder="(00) 00000-0000"
+                            required
+                        />
+                    </div>
+
+                    <div class="grupo-campo">
+                        <label for="senha">Senha</label>
+                        <input
+                            type="password"
+                            id="senha"
+                            name="senha"
+                            placeholder="Crie uma senha"
+                            minlength="8"
+                            required
+                        />
+                    </div>
+
+                    <button type="submit" class="botao-cadastrar-conta">
+                        Cadastrar
+                    </button>
+
+                </form>
+
+                <p class="texto-login">
+                    Já possui uma conta?
+                    <a href="login.html">Entrar</a>
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="rodape">
+        <p class="texto-rodape">
+            &copy; 2026 GameStore - Todos os direitos reservados.
+        </p>
+    </footer>
+
+</body>
+</html>

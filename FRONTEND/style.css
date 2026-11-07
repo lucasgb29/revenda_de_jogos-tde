@@ -344,8 +344,8 @@ body {
 ======================================== */
 
 .rodape {
-    background-color: var(--cor-secundaria);
-    color: var(--cor-texto-escuro);
+    background-color: var(--cor-primaria);
+    color: var(--cor-texto);
 
     text-align: center;
     padding: 1.25rem;
@@ -384,6 +384,408 @@ body {
     .card-jogo {
         width: 100%;
         max-width: 18rem;
+    }
+
+}
+
+/* ========================================
+   15. PÁGINA DE CADASTRO
+======================================== */
+
+.secao-cadastro {
+    background-color: var(--cor-botao-secundaria);
+
+    min-height: 80vh;
+    padding: 3.125rem 1.25rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.card-cadastro {
+    background-color: var(--cor-primaria);
+    color: var(--cor-texto);
+
+    width: 100%;
+    max-width: 28rem;
+
+    padding: 2rem;
+
+    border-radius: 0.5rem;
+    box-shadow: 0 0.125rem 0.5rem var(--cor-sombra);
+
+    text-align: center;
+}
+
+.card-cadastro .titulo-secao {
+    color: var(--cor-secundaria);
+    margin-bottom: 0.625rem;
+}
+
+.descricao-cadastro {
+    margin-bottom: 1.5625rem;
+    line-height: 1.5;
+}
+
+
+.grupo-campo {
+    display: flex;
+    flex-direction: column;
+
+    text-align: left;
+    margin-bottom: 1.125rem;
+}
+
+.grupo-campo label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.grupo-campo input {
+    background-color: var(--cor-display);
+    color: var(--cor-botao-texto);
+
+    border: 1px solid var(--cor-botao-secundaria);
+    border-radius: 0.3125rem;
+
+    padding: 0.75rem;
+
+    font-size: 0.95rem;
+    outline: none;
+
+    transition: box-shadow 0.3s ease;
+}
+
+.grupo-campo input::placeholder {
+    color: #d6a8b8;
+}
+
+.grupo-campo input:focus {
+    box-shadow: 0 0 0 0.125rem var(--cor-secundaria);
+}
+
+
+.botao-cadastrar-conta {
+    background-color: var(--cor-botao-secundaria);
+    color: var(--cor-botao-texto);
+
+    border: none;
+    border-radius: 0.3125rem;
+
+    width: 100%;
+    padding: 0.875rem;
+
+    font-size: 1rem;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: background-color 0.3s ease,
+                transform 0.2s ease;
+}
+
+.botao-cadastrar-conta:hover {
+    background-color: var(--cor-botao-secundaria-hover);
+    transform: scale(1.02);
+}
+
+
+.texto-login {
+    margin-top: 1.25rem;
+}
+
+.texto-login a {
+    color: var(--cor-secundaria);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.texto-login a:hover {
+    text-decoration: underline;
+}
+
+
+
+@media (max-width: 600px) {
+
+    .secao-cadastro {
+        padding: 2rem 1rem;
+    }
+
+    .card-cadastro {
+        padding: 1.5rem;
+    }
+
+}
+
+
+/* ========================================
+   16. PÁGINA DE LOGIN
+======================================== */
+
+.secao-login {
+    background-color: var(--cor-botao-secundaria);
+
+    min-height: 80vh;
+    padding: 3.125rem 1.25rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Card de login */
+
+.card-login {
+    background-color: var(--cor-primaria);
+    color: var(--cor-texto);
+
+    width: 100%;
+    max-width: 28rem;
+
+    padding: 2rem;
+
+    border-radius: 0.5rem;
+    box-shadow: 0 0.125rem 0.5rem var(--cor-sombra);
+
+    text-align: center;
+}
+
+.card-login .titulo-secao {
+    color: var(--cor-secundaria);
+    margin-bottom: 0.625rem;
+}
+
+.descricao-login {
+    margin-bottom: 1.875rem;
+    line-height: 1.5;
+}
+
+/* Botão entrar */
+
+.botao-entrar-conta {
+    background-color: var(--cor-botao-primaria);
+    color: var(--cor-botao-texto);
+
+    border: none;
+    border-radius: 0.3125rem;
+
+    width: 100%;
+    padding: 0.875rem;
+
+    font-size: 1rem;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: background-color 0.3s ease,
+                transform 0.2s ease;
+}
+
+.botao-entrar-conta:hover {
+    background-color: var(--cor-botao-primaria-hover);
+    transform: scale(1.02);
+}
+
+/* Link para cadastro */
+
+.texto-cadastro {
+    margin-top: 1.5625rem;
+}
+
+.texto-cadastro a {
+    color: var(--cor-secundaria);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.texto-cadastro a:hover {
+    text-decoration: underline;
+}
+
+/* Responsividade */
+
+@media (max-width: 600px) {
+
+    .secao-login {
+        padding: 2rem 1rem;
+    }
+
+    .card-login {
+        padding: 1.5rem;
+    }
+
+}
+
+
+/* ========================================
+   17. PÁGINA DE DETALHES DO JOGO
+======================================== */
+
+.secao-detalhes {
+    background-color: var(--cor-botao-secundaria);
+
+    min-height: 80vh;
+    padding: 3.125rem 1.25rem;
+
+    text-align: center;
+}
+
+.secao-detalhes .titulo-secao {
+    color: var(--cor-texto-escuro);
+}
+
+
+.card-detalhes {
+    background-color: var(--cor-primaria);
+    color: var(--cor-texto);
+
+    max-width: 65rem;
+    width: 100%;
+
+    margin: auto;
+    padding: 1.875rem;
+
+    border-radius: 0.5rem;
+    box-shadow: 0 0.125rem 0.5rem var(--cor-sombra);
+
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+    text-align: left;
+}
+
+
+.area-imagem-detalhes {
+    flex: 1;
+}
+
+.imagem-detalhes {
+    width: 100%;
+    max-width: 25rem;
+    height: 28rem;
+
+    object-fit: cover;
+
+    border-radius: 0.5rem;
+}
+
+.informacoes-jogo {
+    flex: 1;
+}
+
+.nome-detalhes {
+    color: var(--cor-secundaria);
+    margin-bottom: 1rem;
+}
+
+.descricao-detalhes {
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.preco-detalhes {
+    color: var(--cor-preco);
+
+    font-size: 1.75rem;
+    font-weight: bold;
+
+    margin-bottom: 1.5rem;
+}
+
+.informacao-item {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+.informacao-item strong {
+    color: var(--cor-secundaria);
+}
+
+.disponivel {
+    color: #55d68b;
+    font-weight: bold;
+}
+
+
+
+.area-compra {
+    display: flex;
+    flex-direction: column;
+    gap: 0.875rem;
+
+    margin-top: 1.875rem;
+}
+
+.botao-efetuar-compra {
+    background-color: var(--cor-botao-primaria);
+    color: var(--cor-botao-texto);
+
+    border: none;
+    border-radius: 0.3125rem;
+
+    padding: 0.875rem;
+
+    font-size: 1rem;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: background-color 0.3s ease,
+                transform 0.2s ease;
+}
+
+.botao-efetuar-compra:hover {
+    background-color: var(--cor-botao-primaria-hover);
+    transform: scale(1.02);
+}
+
+
+.botao-voltar {
+    background-color: var(--cor-botao-secundaria);
+    color: var(--cor-botao-texto);
+
+    padding: 0.875rem;
+
+    border-radius: 0.3125rem;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+
+    transition: background-color 0.3s ease;
+}
+
+.botao-voltar:hover {
+    background-color: var(--cor-botao-secundaria-hover);
+}
+
+
+
+@media (max-width: 700px) {
+
+    .card-detalhes {
+        flex-direction: column;
+        padding: 1.25rem;
+    }
+
+    .area-imagem-detalhes {
+        width: 100%;
+    }
+
+    .imagem-detalhes {
+        max-width: 100%;
+        height: 20rem;
+    }
+
+    .informacoes-jogo {
+        width: 100%;
     }
 
 }
