@@ -1,3 +1,13 @@
+<?php
+session_start();
+
+if (!isset($_SESSION['utilizador'])) {
+    header("Location: login.html");
+    exit();
+}
+
+$usuario = $_SESSION['utilizador'];
+?>
 <!doctype html>
 <html lang="pt-br">
   <head>
@@ -9,6 +19,10 @@
 
   <body>
     <!-- Cabeçalho -->
+
+    <h2>
+    Bem-vindo, <?= htmlspecialchars($usuario) ?>!
+</h2>
     <header class="cabecalho">
       <h1 class="logo">Game<span class="logo-destaque">Store</span></h1>
 
