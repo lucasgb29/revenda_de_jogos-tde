@@ -15,20 +15,15 @@
        # ^^^ aqui ele so ta vendo se existe e igualado para ver se bate
         $_SESSION['utilizador'] = $usuarioInformado; # aqui eu coloquei para salvar o nome do usuario para colocar no front bonitinho
 
-        header("Location: index.html"); # aqui volta para o inicio la
+        header("Location: ../FRONTEND/index.html"); # aqui volta para o inicio la
         exit();
         }else {
             echo "<script> alert('Pare de tentar nvadir :P') </script>";# aqui é meme Lucas veja ai oque ele quer fazer 
         }
     }else{
          echo "<script> alert('Deu B.O na requisição') </script>"; #DEbug
-         header("Location: index.html");
+         header("Location: ../FRONTEND/index.html");
          exit();
     }
-
-
-
-
-
 
 ?>
