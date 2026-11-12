@@ -37,6 +37,9 @@ $usuario = $logado ? $_SESSION['utilizador'] : '';
                 <span class="nome-usuario">
                     Bem-vindo, <?= htmlspecialchars($usuario, ENT_QUOTES, 'UTF-8') ?>!
                 </span>
+                <a href="../PHP/logout.php" class="botao-login">
+                    Sair
+                </a>
 
             <?php else: ?>
 

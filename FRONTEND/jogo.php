@@ -12,6 +12,9 @@
 </head>
 
 <body>
+    <?php
+    require_once "../PHP/proteger.php";
+    ?>
 
     <header class="cabecalho">
 

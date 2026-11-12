@@ -820,7 +820,7 @@ body {
     }
 }
 .nome-usuario {
-    color: var(--cor-botao-texto);
+    color: yellow;
     font-size: 1rem;
     font-weight: bold;
     padding: 0.75rem 1rem;
