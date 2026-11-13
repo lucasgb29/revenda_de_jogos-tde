@@ -3,18 +3,15 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>GameStore - Detalhes do Jogo</title>
 
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <?php
-    require_once "../PHP/proteger.php";
-    ?>
 
     <header class="cabecalho">
 
@@ -23,8 +20,13 @@
         </h1>
 
         <div class="area-login">
-            <a href="index.html" class="botao-login">Início</a>
-            <a href="login.html" class="botao-cadastro">Entrar</a>
+            <a href="index.php" class="botao-login">
+                Início
+            </a>
+
+            <a href="login.html" class="botao-cadastro">
+                Entrar
+            </a>
         </div>
 
     </header>
@@ -40,61 +42,48 @@
                 <div class="area-imagem-detalhes">
 
                     <img
-                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQydwnDp4Akcny34BxZhQPgSruB_AH7L0NW6VVI9HkQ-Q&s=10"
-                        alt="Imagem do GTA V"
+                        id="imagem-jogo"
+                        src=""
+                        alt="Imagem do jogo"
                         class="imagem-detalhes"
-                    />
+                    >
 
                 </div>
 
                 <div class="informacoes-jogo">
 
-                    <h1 class="nome-detalhes">GTA V</h1>
+                    <h1 id="nome-detalhes" class="nome-detalhes">
+                        Carregando...
+                    </h1>
 
-                    <p class="descricao-detalhes">
-                        Explore o mundo aberto de Los Santos, participe
-                        de missões, dirija diversos veículos e viva
-                        aventuras em um dos jogos mais populares do mundo.
+                    <p id="descricao-detalhes" class="descricao-detalhes">
                     </p>
 
-                    <p class="preco-detalhes">
-                        R$ 79,90
+                    <p id="preco-detalhes" class="preco-detalhes">
                     </p>
 
                     <div class="informacao-item">
-                        <strong>Vendedor:</strong>
-                        <span>GameStore Oficial</span>
+                        <strong>Gênero:</strong>
+                        <span id="genero-detalhes"></span>
                     </div>
-
                     <div class="informacao-item">
-                        <strong>Contato:</strong>
-                        <span>contato@gamestore.com</span>
+                        <strong>Publicado por:</strong>
+                        <span id="publicador-detalhes"></span>
                     </div>
-
-                    <div class="informacao-item">
-                        <strong>Telefone:</strong>
-                        <span>(00) 12345-6789</span>
-                    </div>
-
                     <div class="informacao-item">
                         <strong>Disponibilidade:</strong>
-                        <span class="disponivel">6 unidades em estoque</span>
+                        <span id="estoque-detalhes" class="disponivel"></span>
                     </div>
 
                     <div class="area-compra">
 
-                        <button
-                            type="button"
-                            class="botao-efetuar-compra"
-                        >
-                            Efetuar compra
-                        </button>
-
-                        <a href="index.html" class="botao-voltar">
+                        <a href="index.php" class="botao-voltar">
                             Voltar para a loja
                         </a>
 
                     </div>
+
+                    <p id="mensagem"></p>
 
                 </div>
 
@@ -112,6 +101,7 @@
 
     </footer>
 
+    <script src="../JS/detalhe_jogo.js" defer></script>
 </body>
-
 </html>
+

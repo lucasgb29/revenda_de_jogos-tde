@@ -37,6 +37,12 @@ $usuario = $logado ? $_SESSION['utilizador'] : '';
                 <span class="nome-usuario">
                     Bem-vindo, <?= htmlspecialchars($usuario, ENT_QUOTES, 'UTF-8') ?>!
                 </span>
+                <a href="gerenciar.php" class="botao-login">
+                    Gerenciar publicações
+                </a>
+                <a href="cadastrar_jogo.php" class= "botao-login">
+                        Cadastrar jogo
+                </a>
                 <a href="../PHP/logout.php" class="botao-login">
                     Sair
                 </a>
@@ -83,6 +89,7 @@ $usuario = $logado ? $_SESSION['utilizador'] : '';
                     class="botao-filtro botao-ofertas"
                     data-filtro="ofertas">
                     Ofertas
+            
                 </button>
 
                 <select id="filtro-genero" class="seletor-genero">
@@ -105,55 +112,7 @@ $usuario = $logado ? $_SESSION['utilizador'] : '';
             <h2 class="titulo-secao">Jogos disponíveis</h2>
 
             <div class="lista-jogos">
-
-                <div class="card-jogo" data-genero="acao" data-oferta="true">
-
-                    <img class="imagem-jogo"
-                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQydwnDp4Akcny34BxZhQPgSruB_AH7L0NW6VVI9HkQ-Q&s=10"
-                        alt="GTA V">
-
-                    <h3 class="nome-jogo">GTA V</h3>
-
-                    <p class="preco-jogo">R$ 79,90</p>
-
-                    <a href="../FRONTEND/jogo.html" class="botao-comprar">
-                        Comprar
-                    </a>
-
-                </div>
-
-                <div class="card-jogo" data-genero="simulacao" data-oferta="false">
-
-                    <img class="imagem-jogo"
-                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQ0-qoePFEhP1QiaI0mF8lfEaJDT_ZhaNCiPstD4TSlA&s=10"
-                        alt="Spore">
-
-                    <h3 class="nome-jogo">Spore</h3>
-
-                    <p class="preco-jogo">R$ 59,90</p>
-
-                    <a href="../FRONTEND/jogo.html" class="botao-comprar">
-                        Comprar
-                    </a>
-
-                </div>
-
-                <div class="card-jogo" data-genero="rpg" data-oferta="true">
-
-                    <img class="imagem-jogo"
-                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnx8biHnY2OPfRBtXAW322cxOCXZivUuZ1fusqgnutmQ&s=10"
-                        alt="Skyrim">
-
-                    <h3 class="nome-jogo">Skyrim</h3>
-
-                    <p class="preco-jogo">R$ 99,90</p>
-
-                    <a href="../FRONTEND/jogo.html" class="botao-comprar">
-                        Comprar
-                    </a>
-
-                </div>
-
+            <p>Carregando jogos...</p>
             </div>
 
         </section>
@@ -193,60 +152,8 @@ $usuario = $logado ? $_SESSION['utilizador'] : '';
 
     </footer>
 
-    <!-- JavaScript dos filtros -->
-    <script>
-
-        const botoesFiltro = document.querySelectorAll(".botao-filtro");
-        const seletorGenero = document.getElementById("filtro-genero");
-        const jogos = document.querySelectorAll(".card-jogo");
-
-        let filtroAtual = "todos";
-
-        function filtrarJogos() {
-
-            const generoSelecionado = seletorGenero.value;
-
-            jogos.forEach((jogo) => {
-
-                const genero = jogo.dataset.genero;
-                const emOferta = jogo.dataset.oferta === "true";
-
-                const correspondeGenero =
-                    generoSelecionado === "" || genero === generoSelecionado;
-
-                const correspondeOferta =
-                    filtroAtual === "todos" ||
-                    (filtroAtual === "ofertas" && emOferta);
-
-                jogo.style.display =
-                    correspondeGenero && correspondeOferta ? "" : "none";
-
-            });
-
-        }
-
-        botoesFiltro.forEach((botao) => {
-
-            botao.addEventListener("click", () => {
-
-                filtroAtual = botao.dataset.filtro;
-                seletorGenero.value = "";
-
-                botoesFiltro.forEach((outroBotao) => {
-                    outroBotao.classList.remove("ativo");
-                });
-
-                botao.classList.add("ativo");
-
-                filtrarJogos();
-
-            });
-
-        });
-
-        seletorGenero.addEventListener("change", filtrarJogos);
-
-    </script>
+    <!-- o script que tava aqui ta la na pasta JS/listar_jogos.js-->
+    <script src="../JS/listar_jogos.js" defer></script>
 
 </body>
 </html>
