@@ -70,7 +70,7 @@ try {
         ':senha' => $senhaHash
     ]);
 
-    // dai ja inicia a sessao do novo usuario que chique ne
+    // dai ja inicia a sessao do novo usuario que chique
     session_regenerate_id(true);
     $_SESSION['utilizador'] = $usuario;
 
