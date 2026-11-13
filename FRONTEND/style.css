@@ -825,3 +825,592 @@ body {
     font-weight: bold;
     padding: 0.75rem 1rem;
 }
+
+
+/* ========================================
+   CADASTRO DE JOGOS
+======================================== */
+
+#form-cadastro-jogo {
+    width: 100%;
+    text-align: left;
+}
+
+/* Campos do formulário */
+
+#form-cadastro-jogo .grupo-campo textarea,
+#form-cadastro-jogo .grupo-campo select {
+    background-color: var(--cor-display);
+    color: var(--cor-botao-texto);
+
+    border: 1px solid var(--cor-botao-secundaria);
+    border-radius: 0.3125rem;
+
+    padding: 0.75rem;
+
+    font-size: 0.95rem;
+    font-family: Arial, sans-serif;
+
+    outline: none;
+
+    transition: box-shadow 0.3s ease;
+}
+
+/* Área de descrição */
+
+#form-cadastro-jogo .grupo-campo textarea {
+    width: 100%;
+    min-height: 8rem;
+
+    resize: vertical;
+}
+
+/* Select */
+
+#form-cadastro-jogo .grupo-campo select {
+    width: 100%;
+    cursor: pointer;
+}
+
+/* Opções do select */
+
+#form-cadastro-jogo .grupo-campo select option {
+    background-color: var(--cor-display);
+    color: var(--cor-botao-texto);
+}
+
+/* Placeholder */
+
+#form-cadastro-jogo input::placeholder,
+#form-cadastro-jogo textarea::placeholder {
+    color: #d6a8b8;
+}
+
+/* Foco nos campos */
+
+#form-cadastro-jogo input:focus,
+#form-cadastro-jogo textarea:focus,
+#form-cadastro-jogo select:focus {
+    box-shadow: 0 0 0 0.125rem var(--cor-secundaria);
+}
+
+/* Botão de cadastro */
+
+#form-cadastro-jogo .botao-cadastrar-conta {
+    margin-top: 0.5rem;
+}
+
+/* Mensagem */
+
+#mensagem {
+    margin-top: 1rem;
+    text-align: center;
+    line-height: 1.5;
+}
+
+/* Responsividade */
+
+@media (max-width: 600px) {
+
+    .cabecalho {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .area-login {
+        width: 100%;
+        max-width: 18rem;
+    }
+
+    .secao-cadastro {
+        padding: 2rem 1rem;
+    }
+
+    .card-cadastro {
+        padding: 1.5rem;
+    }
+
+}
+
+
+/* FORMULÁRIO DE EDIÇÃO DE JOGOS */
+
+#form-editar-jogo {
+    width: 100%;
+    text-align: left;
+}
+
+#form-editar-jogo .grupo-campo input,
+#form-editar-jogo .grupo-campo textarea,
+#form-editar-jogo .grupo-campo select {
+    width: 100%;
+    background-color: var(--cor-display);
+    color: var(--cor-botao-texto);
+    border: 1px solid var(--cor-botao-secundaria);
+    border-radius: 0.3125rem;
+    padding: 0.75rem;
+    font-size: 0.95rem;
+    font-family: Arial, sans-serif;
+    outline: none;
+    transition: box-shadow 0.3s ease;
+}
+
+#form-editar-jogo .grupo-campo textarea {
+    min-height: 8rem;
+    resize: vertical;
+}
+
+#form-editar-jogo .grupo-campo select {
+    cursor: pointer;
+}
+
+#form-editar-jogo .grupo-campo select option {
+    background-color: var(--cor-display);
+    color: var(--cor-botao-texto);
+}
+
+#form-editar-jogo input::placeholder,
+#form-editar-jogo textarea::placeholder {
+    color: #d6a8b8;
+}
+
+#form-editar-jogo input:focus,
+#form-editar-jogo textarea:focus,
+#form-editar-jogo select:focus {
+    box-shadow: 0 0 0 0.125rem var(--cor-secundaria);
+}
+
+#form-editar-jogo .botao-cadastrar-conta {
+    margin-top: 0.5rem;
+}
+
+#form-editar-jogo .grupo-campo {
+    margin-bottom: 1rem;
+}
+
+
+/* GERENCIAR CATEGORIAS */
+
+#form-categoria {
+    width: 100%;
+    text-align: left;
+}
+
+#form-categoria .grupo-campo {
+    margin-bottom: 1rem;
+}
+
+#form-categoria .grupo-campo input,
+#form-categoria .grupo-campo textarea {
+    width: 100%;
+    background-color: var(--cor-display);
+    color: var(--cor-botao-texto);
+    border: 1px solid var(--cor-botao-secundaria);
+    border-radius: 0.3125rem;
+    padding: 0.75rem;
+    font-size: 0.95rem;
+    font-family: Arial, sans-serif;
+    outline: none;
+    transition: box-shadow 0.3s ease;
+}
+
+#form-categoria .grupo-campo textarea {
+    min-height: 8rem;
+    resize: vertical;
+}
+
+#form-categoria input:focus,
+#form-categoria textarea:focus {
+    box-shadow: 0 0 0 0.125rem var(--cor-secundaria);
+}
+
+#form-categoria .botao-cadastrar-conta,
+#form-categoria .botao-voltar {
+    margin-top: 0.5rem;
+    cursor: pointer;
+}
+
+#titulo-formulario {
+    color: var(--cor-texto);
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+#lista-categorias {
+    width: 100%;
+    margin-top: 1rem;
+    overflow-wrap: break-word;
+}
+
+
+/* =========================================
+   GERENCIAR USUÁRIOS
+========================================= */
+
+#form-usuario {
+    width: 100%;
+    text-align: left;
+}
+
+#form-usuario .grupo-campo {
+    margin-bottom: 1rem;
+}
+
+#form-usuario .grupo-campo input,
+#form-usuario .grupo-campo select {
+    width: 100%;
+    background-color: var(--cor-display);
+    color: var(--cor-botao-texto);
+    border: 1px solid var(--cor-botao-secundaria);
+    border-radius: 0.3125rem;
+    padding: 0.75rem;
+    font-size: 0.95rem;
+    font-family: Arial, sans-serif;
+    outline: none;
+    transition: box-shadow 0.3s ease;
+}
+
+#form-usuario .grupo-campo select {
+    cursor: pointer;
+}
+
+#form-usuario .grupo-campo select option {
+    background-color: var(--cor-display);
+    color: var(--cor-botao-texto);
+}
+
+#form-usuario input:focus,
+#form-usuario select:focus {
+    box-shadow: 0 0 0 0.125rem var(--cor-secundaria);
+}
+
+#titulo-formulario {
+    color: var(--cor-texto);
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+#lista-usuarios {
+    width: 100%;
+    margin-top: 1rem;
+    overflow-wrap: break-word;
+}
+
+/* =========================================
+   BOTÕES SALVAR E CANCELAR
+========================================= */
+
+.area-botoes-formulario {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.area-botoes-formulario button {
+    flex: 1;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 0.3125rem;
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* BOTÃO SALVAR */
+
+.botao-salvar {
+    background-color: var(--cor-botao-primaria);
+    color: var(--cor-botao-texto);
+}
+
+.botao-salvar:hover {
+    background-color: var(--cor-botao-primaria-hover);
+}
+
+/* BOTÃO CANCELAR */
+
+.botao-cancelar {
+    background-color: var(--cor-botao-secundaria);
+    color: var(--cor-botao-texto);
+}
+
+.botao-cancelar:hover {
+    background-color: var(--cor-botao-secundaria-hover);
+}
+
+/* =========================================
+   RESPONSIVIDADE
+========================================= */
+
+@media (max-width: 480px) {
+
+    .area-botoes-formulario {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .area-botoes-formulario button {
+        width: 100%;
+    }
+
+}
+/* =========================================
+   PAINEL DE GERENCIAMENTO
+========================================= */
+
+.painel-gerenciamento {
+    width: 100%;
+    padding: 3rem 1.5rem;
+    background-color: var(--cor-botao-secundaria);
+}
+
+.secao-painel {
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 2.5rem;
+    background-color: var(--cor-primaria);
+    border-radius: 0.75rem;
+    box-shadow: 0 0.5rem 1.5rem rgba(12, 115, 163, 0.25);
+}
+
+/* CABEÇALHO DO PAINEL */
+
+.cabecalho-painel {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.titulo-painel {
+    color: var(--cor-botao-texto);
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.boas-vindas {
+    padding: 1.25rem;
+    background-color: var(--cor-display);
+    border-left: 4px solid var(--cor-secundaria);
+    border-radius: 0.4rem;
+    color: var(--cor-botao-texto);
+}
+
+.boas-vindas p {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.boas-vindas strong {
+    color: var(--cor-secundaria);
+}
+
+.boas-vindas span {
+    font-size: 0.9rem;
+    opacity: 0.85;
+}
+
+/* GRUPOS DE GERENCIAMENTO */
+
+.grupo-gerenciamento {
+    margin-bottom: 2.5rem;
+}
+
+.titulo-grupo {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    color: var(--cor-botao-texto);
+    font-size: 1.3rem;
+    margin-bottom: 1.25rem;
+}
+
+.indicador-titulo {
+    display: inline-block;
+    width: 0.35rem;
+    height: 1.5rem;
+    background-color: var(--cor-secundaria);
+    border-radius: 1rem;
+}
+
+.indicador-admin {
+    background-color: var(--cor-botao-secundaria);
+}
+
+/* LISTA DE OPÇÕES */
+
+.opcoes-gerenciamento {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+/* CARDS DE GERENCIAMENTO */
+
+.card-gerenciamento {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    min-width: 0;
+    padding: 1.25rem;
+    background-color: var(--cor-display);
+    border: 1px solid rgba(252, 220, 231, 0.15);
+    border-radius: 0.5rem;
+    color: var(--cor-botao-texto);
+    text-decoration: none;
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.card-gerenciamento:hover {
+    transform: translateY(-4px);
+    border-color: var(--cor-secundaria);
+    box-shadow: 0 0.4rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+.icone-gerenciamento {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 2.8rem;
+    height: 2.8rem;
+    border-radius: 0.5rem;
+    background-color: var(--cor-botao-primaria);
+    color: var(--cor-botao-texto);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.card-publicacoes .icone-gerenciamento {
+    background-color: var(--cor-botao-secundaria);
+}
+
+.card-usuarios .icone-gerenciamento {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-texto-escuro);
+}
+
+.card-categorias .icone-gerenciamento {
+    background-color: var(--cor-preco);
+}
+
+.texto-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    flex: 1;
+    min-width: 0;
+}
+
+.texto-card strong {
+    font-size: 0.98rem;
+}
+
+.texto-card small {
+    color: var(--cor-botao-texto);
+    opacity: 0.75;
+    font-size: 0.8rem;
+    line-height: 1.4;
+}
+
+.seta-card {
+    color: var(--cor-secundaria);
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+/* NAVEGAÇÃO */
+
+.navegacao-painel {
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(252, 220, 231, 0.2);
+}
+
+.botoes-navegacao {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.botao-loja,
+.botao-sair-painel {
+    flex: 1;
+    padding: 0.85rem;
+    border-radius: 0.4rem;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.25s ease;
+}
+
+.botao-loja {
+    background-color: var(--cor-botao-secundaria);
+    color: var(--cor-botao-texto);
+}
+
+.botao-loja:hover {
+    background-color: var(--cor-botao-secundaria-hover);
+}
+
+.botao-sair-painel {
+    background-color: var(--cor-botao-primaria);
+    color: var(--cor-botao-texto);
+}
+
+.botao-sair-painel:hover {
+    background-color: var(--cor-botao-primaria-hover);
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 650px) {
+
+    .painel-gerenciamento {
+        padding: 1.5rem 1rem;
+    }
+
+    .secao-painel {
+        padding: 1.5rem 1rem;
+    }
+
+    .titulo-painel {
+        font-size: 1.55rem;
+    }
+
+    .opcoes-gerenciamento {
+        grid-template-columns: 1fr;
+    }
+
+    .botoes-navegacao {
+        flex-direction: column;
+    }
+
+}
+
+@media (max-width: 380px) {
+
+    .card-gerenciamento {
+        gap: 0.6rem;
+        padding: 1rem 0.75rem;
+    }
+
+    .icone-gerenciamento {
+        width: 2.3rem;
+        height: 2.3rem;
+        font-size: 1.2rem;
+    }
+
+    .texto-card strong {
+        font-size: 0.88rem;
+    }
+
+    .texto-card small {
+        font-size: 0.75rem;
+    }
+
+}
