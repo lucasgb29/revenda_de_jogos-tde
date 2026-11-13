@@ -22,7 +22,7 @@ formulario.addEventListener("submit", async function(event) {
     try {
 
         // aqui ele envia os dados para API
-        const resposta = await fetch("/PHP/API/cadastrar_jogo.php", {
+        const resposta = await fetch("../PHP/API/cadastrar_jogo.php", {
             method: "POST",
 
             headers: {

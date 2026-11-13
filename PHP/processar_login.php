@@ -5,7 +5,7 @@ session_start();
 
 // req ==== POSTTTT
 if ($_SERVER["REQUEST_METHOD"] !== "POST") {
-    header("Location: ../FRONTEND/login.php");
+    header("Location: ../FRONTEND/login.html");
     exit();
 }
 
@@ -14,7 +14,7 @@ $usuarioInformado = trim($_POST['usuario'] ?? '');
 $senhaInformada = $_POST['senha'] ?? '';
 
 if ($usuarioInformado === '' || $senhaInformada === '') {
-    header("Location: ../FRONTEND/login.php?erro=campos");
+    header("Location: ../FRONTEND/login.html?erro=campos");
     exit();
 }
 
@@ -55,7 +55,7 @@ try {
 
     } else {
 
-        header("Location: ../FRONTEND/login.php?erro=credenciais");
+        header("Location: ../FRONTEND/login.html?erro=credenciais");
         exit();
 
     }
@@ -64,7 +64,7 @@ try {
 
     error_log($erro->getMessage());
 
-    header("Location: ../FRONTEND/login.php?erro=servidor");
+    header("Location: ../FRONTEND/login.html?erro=servidor");
     exit();
 
 }

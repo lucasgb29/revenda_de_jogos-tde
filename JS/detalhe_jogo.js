@@ -17,7 +17,7 @@ async function carregarDetalhes() {
 
         // busca detalhes do jogo no detalhe_jogo.php meio atuo explciativo
        const resposta = await fetch(
-         `/PHP/API/detalhe_jogo.php?id=${encodeURIComponent(id)}`,
+         `../PHP/API/detalhe_jogo.php?id=${encodeURIComponent(id)}`,
          { cache: "no-store" }
         );
         // -----> JSON

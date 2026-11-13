@@ -14,7 +14,7 @@ async function carregarCategorias() {
     try {
 
         const resposta = await fetch(
-            "/PHP/API/categorias.php",
+            "../PHP/API/categorias.php",
             { cache: "no-store" }
         );
 
@@ -79,7 +79,7 @@ async function carregarCategorias() {
                 try {
 
                     const resposta = await fetch(
-                        "/PHP/API/categorias.php",
+                        "../PHP/API/categorias.php",
                         {
                             method: "DELETE",
                             headers: {
@@ -149,7 +149,7 @@ formulario.addEventListener("submit", async function(event) {
     try {
 
         const resposta = await fetch(
-            "/PHP/API/categorias.php",
+            "../PHP/API/categorias.php",
             {
                 method: editando ? "PUT" : "POST",
 

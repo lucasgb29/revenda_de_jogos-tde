@@ -15,7 +15,7 @@ async function carregarUsuarios() {
 
     try {
 
-        const resposta = await fetch("/PHP/API/usuarios.php", {
+        const resposta = await fetch("../PHP/API/usuarios.php", {
             cache: "no-store"
         });
 
@@ -72,7 +72,7 @@ async function carregarUsuarios() {
 
                 try {
 
-                    const resposta = await fetch("/PHP/API/usuarios.php", {
+                    const resposta = await fetch("../PHP/API/usuarios.php", {
                         method: "DELETE",
                         headers: {
                             "Content-Type": "application/json"
@@ -144,7 +144,7 @@ formulario.addEventListener("submit", async event => {
 
     try {
 
-        const resposta = await fetch("/PHP/API/usuarios.php", {
+        const resposta = await fetch("../PHP/API/usuarios.php", {
             method: editando ? "PUT" : "POST",
             headers: {
                 "Content-Type": "application/json"

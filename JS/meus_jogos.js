@@ -5,7 +5,7 @@ async function carregarMeusJogos() {
 
     try {
 
-        const resposta = await fetch("/PHP/API/meus_jogos.php", {
+        const resposta = await fetch("../PHP/API/meus_jogos.php", {
             cache: "no-store"
         });
 
@@ -61,7 +61,7 @@ async function carregarMeusJogos() {
                 try {
 
                     const resposta = await fetch(
-                        "/PHP/API/excluir_jogo.php",
+                        "../PHP/API/excluir_jogo.php",
                         {
                             method: "POST",
                             headers: {

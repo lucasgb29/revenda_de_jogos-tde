@@ -85,6 +85,7 @@ require_once "../PHP/verificar_login.php";
                             <option value="Esporte">Esporte</option>
                             <option value="Corrida">Corrida</option>
                             <option value="Estratégia">Estratégia</option>
+                            <option value="Corrida">Corrida</option>
                             <option value="Terror">Terror</option>
                             <option value="Simulação">Simulação</option>
                             <option value="Outro">Outro</option>

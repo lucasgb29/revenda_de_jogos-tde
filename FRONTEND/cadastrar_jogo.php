@@ -143,6 +143,18 @@ require_once "../PHP/verificar_login.php";
                             Estratégia
                         </option>
 
+                        <option value="Corrida">
+                            Corrida
+                        </option>
+
+                        <option value="Terror">
+                            Terror
+                        </option>
+
+                        <option value="Outro">
+                            Outro
+                        </option>
+
                     </select>
 
                 </div>

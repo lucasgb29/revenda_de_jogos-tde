@@ -55,7 +55,10 @@ $generosPermitidos = [
     "RPG",
     "Simulação",
     "Esporte",
-    "Estratégia"
+    "Estratégia",
+    "Corrida",
+    "Terror",
+    "Outro"
 ];
 
 $esquemaImagem = parse_url($imagem, PHP_URL_SCHEME);

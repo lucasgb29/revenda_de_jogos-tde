@@ -16,7 +16,7 @@ async function carregarJogo() {
     try {
 
         const resposta = await fetch(
-            `/PHP/API/detalhe_jogo.php?id=${encodeURIComponent(id)}`,
+            `../PHP/API/detalhe_jogo.php?id=${encodeURIComponent(id)}`,
             { cache: "no-store" }
         );
 
@@ -63,7 +63,7 @@ formulario.addEventListener("submit", async function(event) {
 
     try {
 
-        const resposta = await fetch("/PHP/API/editar_jogo.php", {
+        const resposta = await fetch("../PHP/API/editar_jogo.php", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

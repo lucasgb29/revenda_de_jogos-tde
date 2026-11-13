@@ -48,15 +48,24 @@ $id = filter_var($dados['id'] ?? null, FILTER_VALIDATE_INT);
 $nome = trim($dados['nome'] ?? '');
 $descricao = trim($dados['descricao'] ?? '');
 $preco = $dados['preco'] ?? null;
-$categoriaId = filter_var(
-    $dados['categoria_id'] ?? null,
-    FILTER_VALIDATE_INT
-);
+$genero = trim((string)($dados['genero'] ?? ''));
 $imagem = trim($dados['imagem'] ?? '');
 $estoque = filter_var(
     $dados['estoque'] ?? null,
     FILTER_VALIDATE_INT
 );
+
+$generosPermitidos = [
+    "Ação",
+    "Aventura",
+    "RPG",
+    "Simulação",
+    "Esporte",
+    "Estratégia",
+    "Corrida",
+    "Terror",
+    "Outro"
+];
 
 // Valida os dados
 $precoValido = is_numeric($preco)
@@ -79,7 +88,8 @@ if (
     mb_strlen($nome) > 150 ||
     $descricao === '' ||
     !$precoValido ||
-    !$categoriaId || $categoriaId < 1 ||
+    $genero === '' ||
+    !in_array($genero, $generosPermitidos, true) ||
     !$imagemValida ||
     strlen($imagem) > 500 ||
     $estoque === false ||
@@ -119,35 +129,12 @@ try {
         exit();
     }
 
-    // Busca a categoria
-    $consultaCategoria = $pdo->prepare(
-        "SELECT nome FROM categorias WHERE id = :id"
-    );
-
-    $consultaCategoria->execute([
-        ":id" => $categoriaId
-    ]);
-
-    $categoria = $consultaCategoria->fetch();
-
-    if (!$categoria) {
-        http_response_code(400);
-
-        echo json_encode([
-            "sucesso" => false,
-            "mensagem" => "Categoria não encontrada."
-        ]);
-
-        exit();
-    }
-
     // Atualiza o jogo
     $sql = "UPDATE jogos SET
                 nome = :nome,
                 descricao = :descricao,
                 preco = :preco,
                 genero = :genero,
-                categoria_id = :categoria_id,
                 imagem = :imagem,
                 estoque = :estoque
             WHERE id = :id";
@@ -158,8 +145,7 @@ try {
         ":nome" => $nome,
         ":descricao" => $descricao,
         ":preco" => $preco,
-        ":genero" => $categoria['nome'],
-        ":categoria_id" => $categoriaId,
+        ":genero" => $genero,
         ":imagem" => $imagem,
         ":estoque" => $estoque,
         ":id" => $id
